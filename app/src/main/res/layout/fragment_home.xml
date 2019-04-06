@@ -3,27 +3,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Home Fragment"
-    android:textStyle="bold"
-    android:layout_centerInParent="true"
-    android:textSize="30sp"/>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/myFAB"
-        android:layout_width="76dp"
-        android:layout_height="67dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/ic_action_named"
-        app:backgroundTint="@color/red"
-        app:borderWidth="0dp"
-        app:elevation="4dp"
-        app:fabSize="normal"
-        app:rippleColor="@color/colorAccent"
+
+    <Button
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/circle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_drawable"
+        android:text="@string/Eng"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
         />
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:id="@+id/circle_button_math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle_button"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_drawable"
+        android:padding="12dp"
+        android:text="@string/Math"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/circle_button_ph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_drawable"
+        android:layout_below="@+id/circle_button_math"
+        android:text="@string/Ph"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
+
 </RelativeLayout>

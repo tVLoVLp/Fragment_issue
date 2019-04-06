@@ -3,6 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.florent37.shapeofview.shapes.CircleView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+
+        android:elevation="4dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/flag"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/Eng"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+    </com.github.florent37.shapeofview.shapes.CircleView>
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

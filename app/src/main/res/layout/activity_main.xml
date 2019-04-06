@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-  
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -18,8 +16,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/navigation"
         android:layout_alignParentBottom="true"
+        app:itemIconTint="@color/colorWhite"
+        app:itemTextColor="@color/colorWhite"
         app:menu="@menu/navigation"
-        android:background="?android:attr/windowBackground">
+        android:background="@color/navigation">
 
     </android.support.design.widget.BottomNavigationView>
 
