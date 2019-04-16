@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main3mth"></activity>
+        <activity android:name=".WordsActivity"></activity>
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".Main3mth" />
         <activity android:name=".Main3ph" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity">
