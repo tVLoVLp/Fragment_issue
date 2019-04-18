@@ -6,4 +6,9 @@
     <string name="create">Create</string>
     <string name="group">Group</string>
     <string name="update">Update</string>
+    <string name="group_dialog">Group name</string>
+    <string name="enter_words">Enter your words</string>
+    <string name="word">Word</string>
+    <string name="transcription">Transcription</string>
+    <string name="translate">Translate</string>
 </resources>

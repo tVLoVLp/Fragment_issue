@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<LinearLayout
+    android:orientation="vertical" android:layout_width="300dp"
+    android:layout_height="230dp">
+
+<TextView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="?attr/actionBarSize"
-    android:orientation="vertical"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:paddingTop="50dp"
-    >
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/nameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:text="@string/group_dialog"
+    android:textSize="26dp"
+    android:textColor="@color/black"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"/>
         <EditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:hint="@string/group" />
-    </android.support.design.widget.TextInputLayout>
+            android:hint="@string/group"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
     <Button
         android:id="@+id/create"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/create"
+        android:textStyle="bold"
         android:clickable="true"
-        android:background="@color/colorAccent"
+        android:background="@color/gold"
         android:layout_marginTop="40dp"
-        android:textColor="@color/colorWhite" />
-
-</LinearLayout>
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
 </LinearLayout>

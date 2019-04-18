@@ -1,6 +1,7 @@
 package com.example.fragments;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.fragments.m_Realm.RealmHelper;
 import com.example.fragments.m_Realm.Spacecraft;
@@ -34,9 +36,10 @@ public class Main2Activity extends AppCompatActivity {
         rv=findViewById(R.id.recycler_view);
         rv.setLayoutManager(new LinearLayoutManager(this));
 //String position=getIntent().getStringExtra("id");
+        //String subject =getIntent().getStringExtra("subject_name");
         Realm.init(getApplicationContext());
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
-                .name(Realm.DEFAULT_REALM_NAME)
+                .name("English")
                 .schemaVersion(0)
                 .deleteRealmIfMigrationNeeded()
                 .build();
@@ -69,13 +72,22 @@ displayInputDialog();
                  Spacecraft s=new Spacecraft();
                  s.setName(nameEditTxt.getText().toString());
 
-                 RealmHelper helper=new RealmHelper(realm);
-                 helper.save(s);
-                 nameEditTxt.setText("");
+                 if(nameEditTxt!=null && nameEditTxt.length()>0){
+                     RealmHelper helper=new RealmHelper(realm);
+                     if(helper.save(s)){
+                         nameEditTxt.setText("");
+                         spacecrafts=helper.retrieve();
+                         adapter=new MyAdapter(Main2Activity.this,spacecrafts);
+                         rv.setAdapter(adapter);
+                     }else{
+                         Toast.makeText(Main2Activity.this,"Name must be unique",Toast.LENGTH_SHORT).show();
+                     }
+                 }else {
+                     Toast.makeText(Main2Activity.this,"Name cannot be empty ",Toast.LENGTH_SHORT).show();
+                 }
 
-                 spacecrafts=helper.retrieve();
-                 adapter=new MyAdapter(Main2Activity.this,spacecrafts);
-                 rv.setAdapter(adapter);
+                 Intent userscreen=new Intent(Main2Activity.this, Main2Activity.class);
+                 startActivity(userscreen);
              }
          });
          d.show();

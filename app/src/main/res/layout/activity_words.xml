@@ -11,17 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textSize="40dp"
+        android:textStyle="normal"
+        android:layout_marginLeft="135dp"
+        android:textColor="@color/black"
         tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="356dp"
-        />
+        tools:layout_editor_absoluteY="356dp" />
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_view_words"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="60dp"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/button_add_group"
+        android:id="@+id/button_add_words"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"

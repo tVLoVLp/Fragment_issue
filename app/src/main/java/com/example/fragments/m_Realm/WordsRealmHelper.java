@@ -8,22 +8,24 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.exceptions.RealmException;
 
-public class RealmHelper {
+public class WordsRealmHelper {
     Realm realm;
+    RealmResults<SpacecraftWords> spacecraftWords;
     Boolean saved=null;
 
-    public RealmHelper(Realm realm) {
+    public WordsRealmHelper(Realm realm) {
         this.realm = realm;
     }
-    public Boolean save(final Spacecraft spacecraft){
-        if(spacecraft==null){
+
+    public Boolean save(final SpacecraftWords spacecraftWords){
+        if(spacecraftWords==null){
             saved=false;
         }else {
             realm.executeTransaction(new Realm.Transaction() {
                 @Override
                 public void execute(Realm realm) {
                     try {
-                        Spacecraft s=realm.copyToRealm(spacecraft);
+                        SpacecraftWords s=realm.copyToRealm(spacecraftWords);
                         saved=true;
                     }catch (RealmException e){
                         e.printStackTrace();
@@ -34,13 +36,16 @@ public class RealmHelper {
         }
         return saved;
     }
-    public ArrayList<String> retrieve(){
-    ArrayList<String> spacecraftNames=new ArrayList<>();
-        RealmResults<Spacecraft>spacecrafts=realm.where(Spacecraft.class).findAll();
+    public void retrieveDB(){
+        spacecraftWords=realm.where(SpacecraftWords.class).findAll();
+    }
 
-        for (Spacecraft s:spacecrafts)
+    public ArrayList<SpacecraftWords> refresh(){
+        ArrayList<SpacecraftWords> spacecraftNames=new ArrayList<>();
+        for (SpacecraftWords s:spacecraftWords)
         {
-            spacecraftNames.add(s.getName());
+            spacecraftNames.add(s);
+
         }
         return spacecraftNames;
     }

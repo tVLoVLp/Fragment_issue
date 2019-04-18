@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:id="@+id/parent_layout_words">
+
+        <TextView
+            android:id="@+id/text_view_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="18dp"
+            android:maxLines="1"
+            android:text="Word"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        <TextView
+            android:id="@+id/text_view_transcription"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Transcription"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        <TextView
+            android:id="@+id/text_view_translate"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Translate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
